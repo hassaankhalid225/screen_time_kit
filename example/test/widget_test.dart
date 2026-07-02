@@ -7,8 +7,9 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:screen_time_kit_example/main.dart';
 
 void main() {
-  testWidgets('demo app builds and renders its sections',
-      (WidgetTester tester) async {
+  testWidgets('demo app builds and renders its sections', (
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(const ScreenTimeDemoApp());
     await tester.pump();
 
