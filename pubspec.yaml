@@ -1,0 +1,41 @@
+name: screen_time_kit
+description: >-
+  One Dart API for screen time, app usage, and app limits — Android and iOS,
+  unified. Wraps Android UsageStatsManager and iOS FamilyControls /
+  DeviceActivity / ManagedSettings behind a single, type-safe interface.
+version: 0.1.0
+homepage: https://github.com/hassaankhalid225/screen_time_kit
+repository: https://github.com/hassaankhalid225/screen_time_kit
+issue_tracker: https://github.com/hassaankhalid225/screen_time_kit/issues
+topics:
+  - screen-time
+  - usage-stats
+  - parental-control
+  - digital-wellbeing
+  - family-controls
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+  flutter: '>=3.22.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  plugin_platform_interface: ^2.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  fake_async: ^1.3.1
+  integration_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.hassaan.screen_time_kit
+        pluginClass: ScreenTimeKitPlugin
+      ios:
+        pluginClass: ScreenTimeKitPlugin

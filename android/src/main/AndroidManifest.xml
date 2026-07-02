@@ -1,0 +1,24 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+      PACKAGE_USAGE_STATS is a "special" (appop) permission. Declaring it here is
+      required, but it does NOT show a runtime dialog — the user must toggle it on
+      manually from Settings > Usage access. See ScreenTimeKit.requestPermission().
+      tools:ignore silences the lint warning telling you it's a system permission;
+      that is expected and intentional for a usage-stats plugin.
+    -->
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+
+    <!--
+      Optional. On Android 11+ (API 30) package visibility is restricted, so
+      resolving human-readable app names / icons for packages returned by
+      UsageStatsManager can fail. Host apps that need labels for arbitrary apps
+      should add QUERY_ALL_PACKAGES to THEIR manifest (it is a Play Store
+      sensitive permission and must be justified there). We do not force it on
+      every consumer. Without it, getAppUsage() falls back to the package name.
+    -->
+
+</manifest>
